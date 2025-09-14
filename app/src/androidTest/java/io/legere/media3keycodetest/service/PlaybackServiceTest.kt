@@ -105,7 +105,7 @@ class PlaybackServiceTest {
     @Test
     fun testServiceReceivesProblematicIntent_expectingCrash() {
         // We'd like to see OnPlaybackResumption called, but it won't be
-        testKeyEvents(KeyEvent.KEYCODE_HEADSETHOOK, false)
+        testKeyEvents(KeyEvent.KEYCODE_HEADSETHOOK, true)
     }
 
     @Test
