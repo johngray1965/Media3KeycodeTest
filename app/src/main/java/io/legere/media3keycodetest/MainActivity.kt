@@ -8,9 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import io.legere.media3keycodetest.ui.theme.Media3KeyCodeTestTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +19,15 @@ class MainActivity : ComponentActivity() {
         setContent {
             Media3KeyCodeTestTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    Text(
+                        text = "The App doesn't do anything, run the tests",
+                        modifier = Modifier.fillMaxSize().padding(innerPadding).padding(
+                            horizontal = 32.dp,
+                            vertical = 64.dp
+                        )
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Media3KeyCodeTestTheme {
-        Greeting("Android")
     }
 }
