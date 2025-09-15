@@ -103,13 +103,18 @@ class PlaybackServiceTest {
     }
 
     @Test
-    fun testServiceReceivesProblematicIntent_expectingCrash() {
+    fun test_HEADSETHOOK() {
         // We'd like to see OnPlaybackResumption called, but it won't be
         testKeyEvents(KeyEvent.KEYCODE_HEADSETHOOK, true)
     }
 
     @Test
-    fun testServiceReceivesGoodIntent() {
+    fun test_MEDIA_PLAY_PAUSE() {
         testKeyEvents(KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE, true)
+    }
+
+    @Test
+    fun test_MEDIA_PLAY() {
+        testKeyEvents(KeyEvent.KEYCODE_MEDIA_PLAY, true)
     }
 }
