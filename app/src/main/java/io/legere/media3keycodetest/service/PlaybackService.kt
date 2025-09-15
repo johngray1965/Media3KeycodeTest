@@ -5,6 +5,7 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
+import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 
 var playbackResumptionCalled = false
@@ -18,7 +19,7 @@ class PlaybackService: MediaSessionService() {
         ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> {
             println("onPlaybackResumption called")
             playbackResumptionCalled = true
-            return super.onPlaybackResumption(mediaSession, controller)
+            return Futures.immediateFuture(MediaSession.MediaItemsWithStartPosition(emptyList(), 0, 0))
         }
 
         override fun onConnect(
