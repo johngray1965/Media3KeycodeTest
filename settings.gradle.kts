@@ -21,4 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Media3KeyCodeTest"
 include(":app")
- 
+
+// To enable a local version of media3
+//(gradle as ExtensionAware).extra["androidxMediaModulePrefix"] = "media3-"
+//apply(from = file("../media/core_settings.gradle"))
+

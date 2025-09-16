@@ -12,6 +12,7 @@ media3 = "1.8.0"
 timber = "5.0.1"
 timberJunitRule = "1.0.1"
 truth = "1.4.5"
+orchestrator_version = "1.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,11 +29,10 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-orchestrator = { module = "androidx.test:orchestrator", version.ref = "orchestrator_version" }
 
 media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3" }
 media3-session = { group = "androidx.media3", name = "media3-session", version.ref = "media3" }
-media3-cast = { group = "androidx.media3", name = "media3-cast", version.ref = "media3" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 timber-junit-rule = { module = "net.lachlanmckee:timber-junit-rule", version.ref = "timberJunitRule" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }

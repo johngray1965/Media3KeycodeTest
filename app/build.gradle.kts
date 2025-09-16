@@ -27,6 +27,11 @@ android {
             )
         }
     }
+    testOptions {
+        execution = "ANDROIDX_TEST_ORCHESTRATOR"
+    }
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -52,6 +57,8 @@ dependencies {
 
     api(libs.media3.exoplayer)
     api(libs.media3.session)
+//    implementation(project(":media3-lib-exoplayer"))
+//    implementation(project(":media3-lib-session"))
 
     implementation(libs.timber)
 
@@ -63,6 +70,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestUtil(libs.androidx.orchestrator)
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
